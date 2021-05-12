@@ -179,15 +179,15 @@ namespace Server.PacketHandling
                                 C.MyChar.CPs += Who.TradingCPs;
                                 C.MyChar.CPs -= C.MyChar.TradingCPs;
                                 StreamWriter sw;
-                                if (!File.Exists(@"Database/Trades/" + C.MyChar.Name + ".txt"))
+                                if (!File.Exists(Program.ConquerPath + @"Trades/" + C.MyChar.Name + ".txt"))
                                     Creat(C.MyChar.Name);
                                     
-                                sw = File.AppendText(@"Database/Trades/" + C.MyChar.Name + ".txt"); sw.WriteLine("TradeWith " + Who.Name + " AT " + DateTime.Now.Month + "/ " + DateTime.Now.Day + " [" + DateTime.Now.Hour + " : " + DateTime.Now.Minute + "] * " + Who.Name + " ( takeCPs [ " + C.MyChar.TradingCPs + " ] TakeSilvers [ " + C.MyChar.TradingSilvers + " ]) ** " + C.MyChar.Name + " (TakeCPs[ " + Who.TradingCPs + " ]TakeSilvers[ " + Who.TradingSilvers + " ])");
+                                sw = File.AppendText(Program.ConquerPath + @"Trades/" + C.MyChar.Name + ".txt"); sw.WriteLine("TradeWith " + Who.Name + " AT " + DateTime.Now.Month + "/ " + DateTime.Now.Day + " [" + DateTime.Now.Hour + " : " + DateTime.Now.Minute + "] * " + Who.Name + " ( takeCPs [ " + C.MyChar.TradingCPs + " ] TakeSilvers [ " + C.MyChar.TradingSilvers + " ]) ** " + C.MyChar.Name + " (TakeCPs[ " + Who.TradingCPs + " ]TakeSilvers[ " + Who.TradingSilvers + " ])");
                                 sw.Close();
-                                   if (!File.Exists(@"Database/Trades/" + Who.Name + ".txt"))
+                                   if (!File.Exists(Program.ConquerPath + @"Trades/" + Who.Name + ".txt"))
                                        Creat(Who.Name);
                                     
-                                    sw = File.AppendText(@"Database/Trades/" + Who.Name + ".txt"); sw.WriteLine("TradeWith " + C.MyChar.Name + " AT " + DateTime.Now.Month + "/ " + DateTime.Now.Day + " [" + DateTime.Now.Hour + " : " + DateTime.Now.Minute + "] * " + C.MyChar.Name + " ( takeCPs [ " + Who.TradingCPs + " ] TakeSilvers [ " + Who.TradingSilvers + " ]) ** " + Who.Name + " (TakeCPs[ " + C.MyChar.TradingCPs + " ]TakeSilvers[ " + C.MyChar.TradingSilvers + " ])");
+                                    sw = File.AppendText(Program.ConquerPath + @"Trades/" + Who.Name + ".txt"); sw.WriteLine("TradeWith " + C.MyChar.Name + " AT " + DateTime.Now.Month + "/ " + DateTime.Now.Day + " [" + DateTime.Now.Hour + " : " + DateTime.Now.Minute + "] * " + C.MyChar.Name + " ( takeCPs [ " + Who.TradingCPs + " ] TakeSilvers [ " + Who.TradingSilvers + " ]) ** " + Who.Name + " (TakeCPs[ " + C.MyChar.TradingCPs + " ]TakeSilvers[ " + C.MyChar.TradingSilvers + " ])");
                                     sw.Close();
 
                                 foreach (uint Id in C.MyChar.TradeSide)

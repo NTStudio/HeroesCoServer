@@ -2474,8 +2474,8 @@ namespace Server
             MySqlCommand cmd2 = new MySqlCommand(MySqlCommandType.UPDATE);
             cmd2.Update("characters").Set("TopDeputyLeader", 0).Where("EntityID", 0, true).Execute();
             {
-                StreamWriter sw = new StreamWriter(@"Database/Tops/TopDeputy.txt");
-                sw = new StreamWriter(@"Database/Tops/TopMember.txt");
+                StreamWriter sw = new StreamWriter(Program.ConquerPath + @"Tops/TopDeputy.txt");
+                sw = new StreamWriter(Program.ConquerPath + @"Tops/TopMember.txt");
                 sw.Close();
             }
         }

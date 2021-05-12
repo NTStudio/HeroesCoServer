@@ -277,7 +277,7 @@ namespace Server.Extra
             Winner.CPs += 500000;
             try
             {
-                StreamWriter sw = new StreamWriter(@"Database/Tops/toppkmission.txt");
+                StreamWriter sw = new StreamWriter(Program.ConquerPath + @"Tops/toppkmission.txt");
                 sw.WriteLine("" + Winner.EntityID + "#1111");
                 sw.Close();
             }

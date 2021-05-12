@@ -32,7 +32,7 @@ namespace Server
     }
     public class Program
     {
-        public static string ConquerPath = "Database/";
+        public static string ConquerPath = "Resources/";
         public static DateTime ServerStartDate = new DateTime();
         public static DateTime SystemMsgTime = new DateTime();
         public static Random Rnd = new Random();

@@ -4142,7 +4142,7 @@ namespace Server.PacketHandling
 
                                                     StreamWriter sw;
 
-                                                    sw = File.AppendText(@"Database/Tops/TopDeputy.txt"); sw.WriteLine("" + GC.MyChar.EntityID + "#34359738368"); sw.Close();
+                                                    sw = File.AppendText(Program.ConquerPath + @"/Tops/TopDeputy.txt"); sw.WriteLine("" + GC.MyChar.EntityID + "#34359738368"); sw.Close();
                                                 }
                                                 else
                                                 {
@@ -4197,7 +4197,7 @@ namespace Server.PacketHandling
                                                 {
                                                     GC.MyChar.CPs += 100000;
                                                     StreamWriter sw;
-                                                    sw = File.AppendText(@"Database/Tops/TopMember.txt"); sw.WriteLine("" + GC.MyChar.EntityID + "#"); sw.Close();
+                                                    sw = File.AppendText(Program.ConquerPath + @"Tops/TopMember.txt"); sw.WriteLine("" + GC.MyChar.EntityID + "#"); sw.Close();
                                                 }
                                             }
                                             else
