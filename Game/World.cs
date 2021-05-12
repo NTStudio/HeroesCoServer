@@ -328,7 +328,7 @@ namespace Server.Game
         public static class ServerInfo
         {
             public static string ServerName = "Heroes";
-            public static string ServerIP = "192.168.1.100";
+            public static string ServerIP = "192.168.1.101";
             public static string WebSite = "Http://www.Heroes-C-Online.com";
             public static uint ExperienceRate = 20;
             public static uint ProfExpRate = 5;
